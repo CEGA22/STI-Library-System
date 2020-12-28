@@ -1,0 +1,51 @@
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe.config
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.pdb
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.AddBook.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.BorrowBook.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Form1.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.HomePage.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.ListOfBooks.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.MainPage.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Properties.Resources.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Return_Book.resources
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.GenerateResource.cache
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CopyComplete
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.exe
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.pdb
+C:\Users\Cedric Gabrang\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csprojAssemblyReference.cache
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe.config
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.pdb
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\bin\Debug\Tulpep.NotificationWindow.dll
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.AddBook.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.BorrowBook.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Form1.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.HomePage.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.ListOfBooks.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.MainPage.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Properties.Resources.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Return_Book.resources
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.GenerateResource.cache
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CoreCompileInputs.cache
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CopyComplete
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.exe
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.pdb
+E:\Visual Studio Codes\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe.config
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.exe
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\STILibrarySystem.pdb
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.BorrowBook.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.LoginPage.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.HomePage.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.ListOfBooks.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Properties.Resources.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.Return_Book.resources
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.GenerateResource.cache
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CopyComplete
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.exe
+C:\Users\pc\source\repos\STILibrarySystem\STILibrarySystem\obj\Debug\STILibrarySystem.pdb
