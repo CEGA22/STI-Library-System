@@ -117,12 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label5.Text" xml:space="preserve">
-    <value>STI Library management system (SLMS) is a software that is 
-developed to handle at least the most basic housekeeping
-functions of a library. It’s a well organized software solution 
-for a library which helps to provide information on any 
-registered materials present in the library
-to the user as well as staff. </value>
-  </data>
 </root>
