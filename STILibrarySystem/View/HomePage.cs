@@ -111,8 +111,10 @@ namespace STILibrarySystem
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            
-           
+            Books books = new Books();
+            books.totalbooks();
+            lbltotalBooks.Text = books.TotalBooks.ToString();
+
             DateTime date = DateTime.Now;
             lbl_date.Text = date.ToString("dddd MMMM dd,yyyy hh:mm tt");
             lblaccount.Text = login.position.ToUpper();
@@ -124,6 +126,8 @@ namespace STILibrarySystem
                 lblaccount.Left = 90;
 
             }
+
+           
 
 
 

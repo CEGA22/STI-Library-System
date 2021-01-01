@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,10 +50,19 @@
             this.lbl_date = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btntotalBooks = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbltotalBooks = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -357,21 +365,135 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.label5.Location = new System.Drawing.Point(305, 442);
+            this.label5.Location = new System.Drawing.Point(305, 542);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(667, 186);
+            this.label5.Size = new System.Drawing.Size(659, 93);
             this.label5.TabIndex = 4;
-            this.label5.Text = resources.GetString("label5.Text");
+            this.label5.Text = "STI Library management system (SLMS) is a software that is \r\ndeveloped to handle " +
+    "at least the most basic housekeeping\r\nfunctions of a library. ";
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.panel3.Location = new System.Drawing.Point(311, 421);
+            this.panel3.Location = new System.Drawing.Point(311, 519);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 3);
             this.panel3.TabIndex = 12;
+            // 
+            // btntotalBooks
+            // 
+            this.btntotalBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.btntotalBooks.FlatAppearance.BorderSize = 0;
+            this.btntotalBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntotalBooks.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntotalBooks.ForeColor = System.Drawing.Color.White;
+            this.btntotalBooks.Image = global::STILibrarySystem.Properties.Resources.books;
+            this.btntotalBooks.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btntotalBooks.Location = new System.Drawing.Point(311, 154);
+            this.btntotalBooks.Name = "btntotalBooks";
+            this.btntotalBooks.Size = new System.Drawing.Size(281, 159);
+            this.btntotalBooks.TabIndex = 13;
+            this.btntotalBooks.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btntotalBooks.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::STILibrarySystem.Properties.Resources.books;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(311, 333);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(281, 159);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Total books: ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tw Cen MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::STILibrarySystem.Properties.Resources.books;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button3.Location = new System.Drawing.Point(607, 154);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(281, 159);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Total books: ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tw Cen MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::STILibrarySystem.Properties.Resources.books;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.Location = new System.Drawing.Point(607, 333);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(281, 159);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Total books: ";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(311, 292);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(281, 21);
+            this.panel4.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(108, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "More info";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.label6.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(316, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 24);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Total books";
+            // 
+            // lbltotalBooks
+            // 
+            this.lbltotalBooks.AutoSize = true;
+            this.lbltotalBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.lbltotalBooks.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalBooks.ForeColor = System.Drawing.Color.White;
+            this.lbltotalBooks.Location = new System.Drawing.Point(316, 199);
+            this.lbltotalBooks.Name = "lbltotalBooks";
+            this.lbltotalBooks.Size = new System.Drawing.Size(207, 43);
+            this.lbltotalBooks.TabIndex = 19;
+            this.lbltotalBooks.Text = "lbltotalBooks";
             // 
             // HomePage
             // 
@@ -379,6 +501,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1220, 666);
+            this.Controls.Add(this.lbltotalBooks);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btntotalBooks);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_date);
@@ -396,6 +525,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +555,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btntotalBooks;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbltotalBooks;
     }
 }
