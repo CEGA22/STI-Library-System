@@ -42,12 +42,14 @@ namespace STILibrarySystem
                 popup.TitleFont = new System.Drawing.Font("AvantGarde Bk BT", 10F);
                 popup.TitleColor = System.Drawing.Color.FromArgb(52, 152, 219);
                 popup.HeaderColor = System.Drawing.Color.FromArgb(245, 215, 110);
-                popup.Popup();  
+                popup.Popup();
+
+               
             }
 
             else
             {
-                MessageBox.Show("Wrong Username or Password");
+                MessageBox.Show("The password or username you've entered is incorrect.", "Failed login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             con.Close();

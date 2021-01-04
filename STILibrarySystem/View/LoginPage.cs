@@ -86,7 +86,7 @@ namespace STILibrarySystem
             {
                 login lg = new login();
                 lg.UserCredentials(txt_username.Text, txt_password.Text);
-                this.Hide();  
+                //this.Hide();  
             }
         }
 
@@ -109,7 +109,6 @@ namespace STILibrarySystem
             if(txt_username.Text == "Enter Username")
             {
                 txt_username.Text = "";
-
             }
         }
 
