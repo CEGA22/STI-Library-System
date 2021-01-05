@@ -20,6 +20,7 @@ namespace STILibrarySystem
         {
             InitializeComponent();
             lbl_Hide.Hide();
+            btnRestore.Hide();
         }
      
         private void txt_username_MouseClick(object sender, MouseEventArgs e)
@@ -32,15 +33,7 @@ namespace STILibrarySystem
             txt_password.Clear();
         }
 
-        private void label3_MouseEnter(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.FromArgb(217, 30, 24);
-        }
-
-        private void label3_MouseLeave(object sender, EventArgs e)
-        {
-            label3.BackColor = Color.FromArgb(25, 181, 254);
-        }
+       
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -86,7 +79,7 @@ namespace STILibrarySystem
             {
                 login lg = new login();
                 lg.UserCredentials(txt_username.Text, txt_password.Text);
-                //this.Hide();  
+                this.Hide();
             }
         }
 
@@ -129,9 +122,39 @@ namespace STILibrarySystem
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Maximized(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            btnRestore.Show();
+            button1.Hide();
+           
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            button1.Show();
+            btnRestore.Hide();
+        }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Sure You Want to Exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+            else
+            {
+                //Do Something
+            }
         }
 
         private void txt_username_Leave(object sender, EventArgs e)

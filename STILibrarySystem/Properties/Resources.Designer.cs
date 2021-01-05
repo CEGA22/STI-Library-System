@@ -63,16 +63,6 @@ namespace STILibrarySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _342407_PA9PYX_915 {
-            get {
-                object obj = ResourceManager.GetObject("342407-PA9PYX-915", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
@@ -253,9 +243,19 @@ namespace STILibrarySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Maximize {
+        internal static System.Drawing.Bitmap Maximize_icon_16px {
             get {
-                object obj = ResourceManager.GetObject("Maximize", resourceCulture);
+                object obj = ResourceManager.GetObject("Maximize icon 16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimized_Icon_16px {
+            get {
+                object obj = ResourceManager.GetObject("Minimized Icon 16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +266,16 @@ namespace STILibrarySystem.Properties {
         internal static System.Drawing.Bitmap open_book {
             get {
                 object obj = ResourceManager.GetObject("open-book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Restore_16px {
+            get {
+                object obj = ResourceManager.GetObject("Restore 16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -23,15 +23,17 @@ namespace STILibrarySystem
             cmd.Parameters.AddWithValue("@password", password);
             SqlDataReader dr = cmd.ExecuteReader(); 
 
+
             if (dr.Read())
             {
+               
                 string firstname = Convert.ToString(dr["firstname"]);
                 string lastname = Convert.ToString(dr["lastname"]);
                 position = Convert.ToString(dr["username"]);
                 DateTime date = DateTime.Now;
                 HomePage HP = new HomePage();
-                HP.Show(); 
-               
+                HP.Show();
+
                 //For Popup Notification
                 PopupNotifier popup = new PopupNotifier();
                 popup.TitleText = "Successfully Logged In to STI Library System";
@@ -43,13 +45,15 @@ namespace STILibrarySystem
                 popup.TitleColor = System.Drawing.Color.FromArgb(52, 152, 219);
                 popup.HeaderColor = System.Drawing.Color.FromArgb(245, 215, 110);
                 popup.Popup();
-
-               
             }
+            
 
             else
             {
+                LoginPage lp = new LoginPage();
+                lp.Show();
                 MessageBox.Show("The password or username you've entered is incorrect.", "Failed login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
 
             con.Close();

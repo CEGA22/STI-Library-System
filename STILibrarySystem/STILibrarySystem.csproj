@@ -219,5 +219,20 @@
   <ItemGroup>
     <None Include="Resources\full-screen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize icon 24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize icon 16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore 16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimized Icon 16px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
