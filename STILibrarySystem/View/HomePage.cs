@@ -17,6 +17,7 @@ namespace STILibrarySystem
         public HomePage()
         {
             InitializeComponent();
+            btnRestore.Hide();
             
         }
 
@@ -84,29 +85,11 @@ namespace STILibrarySystem
             btn_logout.ForeColor = Color.White;
         }
 
-        private void label2_MouseEnter(object sender, EventArgs e)
-        {
-            label2.ForeColor = Color.FromArgb(217, 30, 24);
-        }
-
-        private void label2_MouseLeave(object sender, EventArgs e)
-        {
-            label2.ForeColor = Color.White;
-        }
+       
 
         private void label2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are You Sure You Want to Exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-
-            else
-            {
-                //Do Something
-            }
+           
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -163,6 +146,35 @@ namespace STILibrarySystem
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            btnRestore.Show();
+            button1.Hide();
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestore.Hide();
+            button1.Show();
+        }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Sure You Want to Exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+            else
+            {
+                //Do Something
+            }
         }
     }
 }
