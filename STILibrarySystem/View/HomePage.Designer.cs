@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblaccount = new System.Windows.Forms.Label();
             this.panelBorrowedHistory = new System.Windows.Forms.Panel();
@@ -42,13 +43,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbltotalBooks = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btntotalBooks = new System.Windows.Forms.Button();
-            this.btnRestore = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnMinimized = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_ListofBooks = new System.Windows.Forms.Button();
@@ -56,11 +62,13 @@
             this.btn_BorrowBook = new System.Windows.Forms.Button();
             this.btn_borrowedHistory = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnMinimized = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -72,14 +80,27 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnMinimized);
-            this.panel2.Controls.Add(this.btnRestore);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(286, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(934, 85);
             this.panel2.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(897, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(37, 38);
+            this.btnExit.TabIndex = 20;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -191,9 +212,9 @@
             this.lbl_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.lbl_date.Location = new System.Drawing.Point(293, 88);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(108, 40);
+            this.lbl_date.Size = new System.Drawing.Size(84, 40);
             this.lbl_date.TabIndex = 3;
-            this.lbl_date.Text = "label5";
+            this.lbl_date.Text = "Date";
             // 
             // label5
             // 
@@ -214,127 +235,184 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.panel3.Location = new System.Drawing.Point(311, 519);
+            this.panel3.Location = new System.Drawing.Point(305, 526);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(850, 3);
+            this.panel3.Size = new System.Drawing.Size(903, 5);
             this.panel3.TabIndex = 12;
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(311, 386);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(0, 133);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(281, 21);
+            this.panel4.Size = new System.Drawing.Size(919, 21);
             this.panel4.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.label11.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(198, -96);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(207, 43);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "lbltotalBooks";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.label9.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(195, -96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(207, 43);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "lbltotalBooks";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.label10.Font = new System.Drawing.Font("Tw Cen MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(199, -53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(187, 40);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Total books";
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(108, 0);
+            this.label3.Location = new System.Drawing.Point(427, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "More info";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.label8.Font = new System.Drawing.Font("Tw Cen MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(196, -53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(187, 40);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Total books";
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.label6.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Tw Cen MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(316, 355);
+            this.label6.Location = new System.Drawing.Point(13, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 24);
+            this.label6.Size = new System.Drawing.Size(187, 40);
             this.label6.TabIndex = 18;
             this.label6.Text = "Total books";
             // 
             // lbltotalBooks
             // 
-            this.lbltotalBooks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbltotalBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbltotalBooks.AutoSize = true;
             this.lbltotalBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
             this.lbltotalBooks.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotalBooks.ForeColor = System.Drawing.Color.White;
-            this.lbltotalBooks.Location = new System.Drawing.Point(316, 293);
+            this.lbltotalBooks.Location = new System.Drawing.Point(12, 35);
             this.lbltotalBooks.Name = "lbltotalBooks";
             this.lbltotalBooks.Size = new System.Drawing.Size(207, 43);
             this.lbltotalBooks.TabIndex = 19;
             this.lbltotalBooks.Text = "lbltotalBooks";
             // 
-            // button3
+            // panel6
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tw Cen MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::STILibrarySystem.Properties.Resources.books;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(624, 248);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(281, 159);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Total books: ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.panel6.Controls.Add(this.lbltotalBooks);
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Location = new System.Drawing.Point(301, 147);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(904, 155);
+            this.panel6.TabIndex = 23;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
             // 
-            // btntotalBooks
+            // pictureBox3
             // 
-            this.btntotalBooks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btntotalBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.btntotalBooks.FlatAppearance.BorderSize = 0;
-            this.btntotalBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntotalBooks.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntotalBooks.ForeColor = System.Drawing.Color.White;
-            this.btntotalBooks.Image = global::STILibrarySystem.Properties.Resources.books;
-            this.btntotalBooks.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btntotalBooks.Location = new System.Drawing.Point(311, 248);
-            this.btntotalBooks.Name = "btntotalBooks";
-            this.btntotalBooks.Size = new System.Drawing.Size(281, 159);
-            this.btntotalBooks.TabIndex = 13;
-            this.btntotalBooks.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btntotalBooks.UseVisualStyleBackColor = false;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::STILibrarySystem.Properties.Resources.open_book1;
+            this.pictureBox3.Location = new System.Drawing.Point(753, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(148, 112);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
             // 
-            // btnRestore
+            // pictureBox5
             // 
-            this.btnRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestore.FlatAppearance.BorderSize = 0;
-            this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestore.Image = global::STILibrarySystem.Properties.Resources.Restore_16px;
-            this.btnRestore.Location = new System.Drawing.Point(853, 1);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(41, 32);
-            this.btnRestore.TabIndex = 14;
-            this.btnRestore.UseVisualStyleBackColor = true;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = global::STILibrarySystem.Properties.Resources.open_book1;
+            this.pictureBox5.Location = new System.Drawing.Point(-72, -243);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1056, 112);
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
             // 
-            // button1
+            // pictureBox4
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::STILibrarySystem.Properties.Resources.Maximize_icon_16px;
-            this.button1.Location = new System.Drawing.Point(855, -3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 41);
-            this.button1.TabIndex = 13;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::STILibrarySystem.Properties.Resources.open_book1;
+            this.pictureBox4.Location = new System.Drawing.Point(-75, -243);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1056, 112);
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnMinimized
+            // 
+            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized.FlatAppearance.BorderSize = 0;
+            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
+            this.btnMinimized.Location = new System.Drawing.Point(866, 5);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(36, 23);
+            this.btnMinimized.TabIndex = 15;
+            this.btnMinimized.UseVisualStyleBackColor = true;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
             // pictureBox1
             // 
@@ -358,7 +436,7 @@
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.Image = global::STILibrarySystem.Properties.Resources.exit;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(12, 497);
+            this.btn_logout.Location = new System.Drawing.Point(15, 497);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(223, 46);
             this.btn_logout.TabIndex = 18;
@@ -382,7 +460,7 @@
             this.btn_ListofBooks.ForeColor = System.Drawing.Color.White;
             this.btn_ListofBooks.Image = global::STILibrarySystem.Properties.Resources.check_mark;
             this.btn_ListofBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ListofBooks.Location = new System.Drawing.Point(10, 421);
+            this.btn_ListofBooks.Location = new System.Drawing.Point(10, 345);
             this.btn_ListofBooks.Name = "btn_ListofBooks";
             this.btn_ListofBooks.Size = new System.Drawing.Size(223, 46);
             this.btn_ListofBooks.TabIndex = 14;
@@ -406,7 +484,7 @@
             this.btn_ReturnBook.ForeColor = System.Drawing.Color.White;
             this.btn_ReturnBook.Image = global::STILibrarySystem.Properties.Resources.left_arrow;
             this.btn_ReturnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ReturnBook.Location = new System.Drawing.Point(10, 349);
+            this.btn_ReturnBook.Location = new System.Drawing.Point(13, 273);
             this.btn_ReturnBook.Name = "btn_ReturnBook";
             this.btn_ReturnBook.Size = new System.Drawing.Size(267, 46);
             this.btn_ReturnBook.TabIndex = 12;
@@ -430,7 +508,7 @@
             this.btn_BorrowBook.ForeColor = System.Drawing.Color.White;
             this.btn_BorrowBook.Image = global::STILibrarySystem.Properties.Resources.open_book;
             this.btn_BorrowBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BorrowBook.Location = new System.Drawing.Point(11, 281);
+            this.btn_BorrowBook.Location = new System.Drawing.Point(15, 204);
             this.btn_BorrowBook.Name = "btn_BorrowBook";
             this.btn_BorrowBook.Size = new System.Drawing.Size(267, 46);
             this.btn_BorrowBook.TabIndex = 10;
@@ -452,16 +530,17 @@
             this.btn_borrowedHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_borrowedHistory.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_borrowedHistory.ForeColor = System.Drawing.Color.White;
-            this.btn_borrowedHistory.Image = global::STILibrarySystem.Properties.Resources.bank;
+            this.btn_borrowedHistory.Image = global::STILibrarySystem.Properties.Resources._class;
             this.btn_borrowedHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrowedHistory.Location = new System.Drawing.Point(10, 212);
+            this.btn_borrowedHistory.Location = new System.Drawing.Point(14, 419);
             this.btn_borrowedHistory.Name = "btn_borrowedHistory";
             this.btn_borrowedHistory.Size = new System.Drawing.Size(267, 46);
             this.btn_borrowedHistory.TabIndex = 8;
-            this.btn_borrowedHistory.Text = "BORROWED HISTORY";
+            this.btn_borrowedHistory.Text = "STUDENTS";
             this.btn_borrowedHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_borrowedHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_borrowedHistory.UseVisualStyleBackColor = true;
+            this.btn_borrowedHistory.Click += new System.EventHandler(this.btn_borrowedHistory_Click);
             this.btn_borrowedHistory.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.btn_borrowedHistory.MouseLeave += new System.EventHandler(this.btn_borrowedHistory_MouseLeave);
             // 
@@ -477,45 +556,13 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // btnMinimized
-            // 
-            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.FlatAppearance.BorderSize = 0;
-            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized.Location = new System.Drawing.Point(811, 5);
-            this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(36, 23);
-            this.btnMinimized.TabIndex = 15;
-            this.btnMinimized.UseVisualStyleBackColor = true;
-            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(897, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(37, 38);
-            this.btnExit.TabIndex = 20;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1220, 666);
-            this.Controls.Add(this.lbltotalBooks);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btntotalBooks);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbl_date);
@@ -533,6 +580,11 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -561,15 +613,19 @@
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btntotalBooks;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbltotalBooks;
-        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnMinimized;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
     }
 }

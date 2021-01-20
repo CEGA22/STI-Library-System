@@ -17,7 +17,7 @@ namespace STILibrarySystem
         public HomePage()
         {
             InitializeComponent();
-            btnRestore.Hide();
+           
             
         }
 
@@ -110,9 +110,6 @@ namespace STILibrarySystem
 
             }
 
-           
-
-
 
         }
 
@@ -143,19 +140,9 @@ namespace STILibrarySystem
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnRestore.Show();
-            button1.Hide();
-        }
+       
 
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btnRestore.Hide();
-            button1.Show();
-        }
+       
 
         private void btnMinimized_Click(object sender, EventArgs e)
         {
@@ -175,6 +162,37 @@ namespace STILibrarySystem
             {
                 //Do Something
             }
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.FromArgb(250, 216, 89);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ListOfBooks LOB = new ListOfBooks();
+            LOB.Show();
+            this.Hide();
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+           label3.ForeColor = Color.White;
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            ListOfBooks LOB = new ListOfBooks();
+            LOB.Show();
+            this.Hide();
+        }
+
+        private void btn_borrowedHistory_Click(object sender, EventArgs e)
+        {
+            Students students = new Students();
+            students.Show();
+            this.Hide();
         }
     }
 }
