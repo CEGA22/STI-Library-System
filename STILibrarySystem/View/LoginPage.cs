@@ -20,7 +20,7 @@ namespace STILibrarySystem
         {
             InitializeComponent();
             lbl_Hide.Hide();
-            btnRestore.Hide();
+           
         }
      
         private void txt_username_MouseClick(object sender, MouseEventArgs e)
@@ -125,16 +125,14 @@ namespace STILibrarySystem
         private void btn_Maximized(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            btnRestore.Show();
-            button1.Hide();
+           
            
         }
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-            button1.Show();
-            btnRestore.Hide();
+           
         }
 
         private void btnMinimized_Click(object sender, EventArgs e)

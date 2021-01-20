@@ -27,6 +27,7 @@ namespace STILibrarySystem
             booklist();
             btnDelete.Hide();
             btnSaveUpdate.Hide();
+          
            
         }
 
@@ -78,15 +79,7 @@ namespace STILibrarySystem
 
         }
 
-        private void lbl_close(object sender, EventArgs e)
-        {
-            lbl_exit.BackColor = Color.FromArgb(217, 30, 24);
-        }
-
-        private void lbl_exit_MouseLeave(object sender, EventArgs e)
-        {
-            lbl_exit.BackColor = Color.FromArgb(37, 116, 169);
-        }
+       
 
         private void lbl_exit_Click(object sender, EventArgs e)
         {
@@ -227,6 +220,163 @@ namespace STILibrarySystem
             btnEdit.Hide();
             btnDelete.Show();
             btnSaveUpdate.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+          
+        }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+           
+        }
+
+        private void btnMinimized1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are You Sure You Want to Exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+            else
+            {
+                //Do Something
+            }
+        }
+
+        private void Copyrights_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void Copies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtCopyrights_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtCopies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtDaysReturn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TitleOfBook_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Copies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Copyrights_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CallNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Author_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CategoryCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listofBooksView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

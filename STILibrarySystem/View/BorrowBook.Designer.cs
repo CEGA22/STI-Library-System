@@ -59,6 +59,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnProceed = new System.Windows.Forms.Button();
+            this.btnMinimized1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.StudentInfoPanel.SuspendLayout();
@@ -68,6 +69,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(116)))), ((int)(((byte)(169)))));
+            this.panel2.Controls.Add(this.btnMinimized1);
             this.panel2.Controls.Add(this.lbl_exit);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -419,6 +421,19 @@
             this.btnProceed.UseVisualStyleBackColor = false;
             this.btnProceed.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnMinimized1
+            // 
+            this.btnMinimized1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized1.FlatAppearance.BorderSize = 0;
+            this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
+            this.btnMinimized1.Location = new System.Drawing.Point(1164, 9);
+            this.btnMinimized1.Name = "btnMinimized1";
+            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
+            this.btnMinimized1.TabIndex = 19;
+            this.btnMinimized1.UseVisualStyleBackColor = true;
+            this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
+            // 
             // BorrowBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,5 +496,6 @@
         private System.Windows.Forms.Label lbl_Author;
         private System.Windows.Forms.Button btnProceed;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnMinimized1;
     }
 }

@@ -65,3 +65,4 @@ C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILi
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CopyComplete
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.exe
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.pdb
+C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.Students.resources

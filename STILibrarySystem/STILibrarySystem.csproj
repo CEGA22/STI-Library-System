@@ -50,7 +50,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudent.cs" />
     <Compile Include="Books.cs" />
+    <Compile Include="DeleteStudent.cs" />
     <Compile Include="Model\AddBooks.cs" />
     <Compile Include="AppConfig.cs" />
     <Compile Include="Model\bookBorrow.cs" />
@@ -59,6 +61,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.cs" />
     <Compile Include="View\BookList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +117,9 @@
       <DependentUpon>STILibrarySystemDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\UpdateBooks.cs" />
+    <EmbeddedResource Include="Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\BorrowBook.resx">
       <DependentUpon>BorrowBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +245,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minimized Icon 16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\class.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
