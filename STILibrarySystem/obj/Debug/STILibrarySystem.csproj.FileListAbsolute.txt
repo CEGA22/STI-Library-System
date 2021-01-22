@@ -53,7 +53,7 @@ C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\bin\Debug\STILi
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\bin\Debug\STILibrarySystem.exe
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\bin\Debug\STILibrarySystem.pdb
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\bin\Debug\Tulpep.NotificationWindow.dll
-C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.csprojAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.Students.resources
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.BorrowBook.resources
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.LoginPage.resources
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.HomePage.resources
@@ -65,4 +65,4 @@ C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILi
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.csproj.CopyComplete
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.exe
 C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.pdb
-C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.Students.resources
+C:\Users\pc\Documents\GitHub\STI-Library-System\STILibrarySystem\obj\Debug\STILibrarySystem.csprojAssemblyReference.cache

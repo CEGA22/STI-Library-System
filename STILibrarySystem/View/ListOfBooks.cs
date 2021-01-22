@@ -17,6 +17,8 @@ namespace STILibrarySystem
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
         public int booknumber;
         HomePage HP;
+        string edit;
+        
         
         
 
@@ -27,6 +29,7 @@ namespace STILibrarySystem
             booklist();
             btnDelete.Hide();
             btnSaveUpdate.Hide();
+            
           
            
         }
@@ -132,13 +135,12 @@ namespace STILibrarySystem
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             
-            AddBooks AB = new AddBooks();
-            AB.SaveAddBooks(txtBookNumber.Text, txtTitleofBook.Text, txtCategoryCode.Text, txtAuthor.Text, txtCallNumber.Text, txtCopyrights.Text, txtCopies.Text, txtDaysReturn.Text);
-            booklist();
-            TxtboxClear();
-
-
-
+                AddBooks AB = new AddBooks();
+                AB.SaveAddBooks(txtBookNumber.Text, txtTitleofBook.Text, txtCategoryCode.Text, txtAuthor.Text, txtCallNumber.Text, txtCopyrights.Text, txtCopies.Text, txtDaysReturn.Text);
+                booklist();
+                TxtboxClear();
+            
+            
         }
 
        
@@ -200,6 +202,7 @@ namespace STILibrarySystem
             booklist();
             btnDelete.Hide();
             btnEdit.Show();
+            btnSaveUpdate.Hide();
             TxtboxClear();
         }
 
@@ -217,9 +220,17 @@ namespace STILibrarySystem
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            btnEdit.Hide();
-            btnDelete.Show();
-            btnSaveUpdate.Show();
+            if(txtBookNumber.Text == string.Empty)
+            {
+                MessageBox.Show("Please select book", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                btnEdit.Hide();
+                btnDelete.Show();
+                btnSaveUpdate.Show();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -284,99 +295,6 @@ namespace STILibrarySystem
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TitleOfBook_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Copies_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Copyrights_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CallNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Author_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CategoryCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listofBooksView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

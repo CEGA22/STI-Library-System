@@ -24,8 +24,6 @@ namespace STILibrarySystem
 
         }
 
-
-       
         public void clear()
         {
             txtStudentNo.Text = "";
@@ -38,10 +36,6 @@ namespace STILibrarySystem
             txtPatronType.Text = "";
             txtDepartment.Text = "";
         }
-
-        
-
-
 
         public void booklist()
         {
@@ -66,7 +60,7 @@ namespace STILibrarySystem
         }
         private void btnSearchStudent_Click(object sender, EventArgs e)
         {
-            if (txtStudentNo.Text == String.Empty)
+            if (txtStudentNo.Text == String.Empty )
             {
                 MessageBox.Show("Enter Your Student No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -77,8 +71,6 @@ namespace STILibrarySystem
                 ReturnedBookList.Show();
                 try
                 {
-
-
                     SqlCommand command = new SqlCommand("SELECT * FROM borrow_books WHERE student_no = " + int.Parse(txtStudentNo.Text), con);
                     con.Open();
                     SqlDataReader sdr = command.ExecuteReader();
@@ -92,38 +84,24 @@ namespace STILibrarySystem
                         txtDepartment.Text = (sdr["department"].ToString());
                         btnProceed.Enabled = true;
                         txtStudentNo.ReadOnly = true;
-
                     }
-
-
 
                     else
                     {
                         ReturnedBookList.Hide();
                         MessageBox.Show("Book is not borrowed with this student no. or Invalid Student No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtStudentNo.Text = "";
-
                     }
-
-
-
                     con.Close();
-
                 }
-
 
                 catch (Exception e1)
                 {
                     MessageBox.Show("Invalid Student No.");
                 }
             }
-
-           
         }
-
       
-
-
         private void ReturnedBookList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex >= 0)
@@ -140,9 +118,20 @@ namespace STILibrarySystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            HomePage HP = new HomePage();
-            HP.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show("Are You Sure You Want to Cancel the transaction?", "Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                HomePage HP = new HomePage();
+                HP.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                //Do Something
+            }
+           
         }
 
         private void btnProceed_Click(object sender, EventArgs e)

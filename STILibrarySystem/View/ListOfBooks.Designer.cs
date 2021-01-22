@@ -34,10 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnMinimized1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listofBooksView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.txtbook = new System.Windows.Forms.TextBox();
+            this.btnSaveUpdate = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,7 +69,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblBack = new System.Windows.Forms.Label();
             this.txtBookNumber = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -80,19 +84,14 @@
             this.txtCallNumber = new System.Windows.Forms.TextBox();
             this.txtCategoryCode = new System.Windows.Forms.TextBox();
             this.txtTitleofBook = new System.Windows.Forms.TextBox();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSaveUpdate = new System.Windows.Forms.Button();
-            this.btnMinimized1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listofBooksView)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,6 +137,19 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnMinimized1
+            // 
+            this.btnMinimized1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized1.FlatAppearance.BorderSize = 0;
+            this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
+            this.btnMinimized1.Location = new System.Drawing.Point(1364, 6);
+            this.btnMinimized1.Name = "btnMinimized1";
+            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
+            this.btnMinimized1.TabIndex = 6;
+            this.btnMinimized1.UseVisualStyleBackColor = true;
+            this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -150,6 +162,16 @@
             this.label2.Size = new System.Drawing.Size(159, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "List of Books";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::STILibrarySystem.Properties.Resources.sti_logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // listofBooksView
             // 
@@ -194,7 +216,6 @@
             this.listofBooksView.Size = new System.Drawing.Size(969, 496);
             this.listofBooksView.TabIndex = 3;
             this.listofBooksView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listofBooksView_CellClick);
-            this.listofBooksView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listofBooksView_CellContentClick);
             // 
             // panel1
             // 
@@ -223,7 +244,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 563);
             this.panel1.TabIndex = 22;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Image = global::STILibrarySystem.Properties.Resources.edit;
+            this.btnEdit.Location = new System.Drawing.Point(9, 509);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(58, 39);
+            this.btnEdit.TabIndex = 36;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Image = global::STILibrarySystem.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(363, 509);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(49, 40);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
             // 
             // txtbook
             // 
@@ -232,6 +280,23 @@
             this.txtbook.Size = new System.Drawing.Size(100, 25);
             this.txtbook.TabIndex = 34;
             this.txtbook.Visible = false;
+            // 
+            // btnSaveUpdate
+            // 
+            this.btnSaveUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSaveUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(116)))), ((int)(((byte)(169)))));
+            this.btnSaveUpdate.FlatAppearance.BorderSize = 0;
+            this.btnSaveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnSaveUpdate.Image = global::STILibrarySystem.Properties.Resources.save;
+            this.btnSaveUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveUpdate.Location = new System.Drawing.Point(11, 509);
+            this.btnSaveUpdate.Name = "btnSaveUpdate";
+            this.btnSaveUpdate.Size = new System.Drawing.Size(207, 40);
+            this.btnSaveUpdate.TabIndex = 33;
+            this.btnSaveUpdate.Text = "Save Changes";
+            this.btnSaveUpdate.UseVisualStyleBackColor = false;
+            this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
             // 
             // label20
             // 
@@ -246,7 +311,6 @@
             this.label20.Size = new System.Drawing.Size(147, 24);
             this.label20.TabIndex = 32;
             this.label20.Text = "Days of Return: ";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label9
             // 
@@ -261,7 +325,6 @@
             this.label9.Size = new System.Drawing.Size(80, 24);
             this.label9.TabIndex = 31;
             this.label9.Text = "Copies: ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -276,7 +339,6 @@
             this.label8.Size = new System.Drawing.Size(114, 24);
             this.label8.TabIndex = 30;
             this.label8.Text = "Copyrights: ";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -291,7 +353,6 @@
             this.label7.Size = new System.Drawing.Size(129, 24);
             this.label7.TabIndex = 29;
             this.label7.Text = "Call Number: ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox1
             // 
@@ -301,7 +362,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(69, 32);
             this.textBox1.TabIndex = 24;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label6
@@ -317,7 +377,6 @@
             this.label6.Size = new System.Drawing.Size(70, 24);
             this.label6.TabIndex = 28;
             this.label6.Text = "Author:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -332,7 +391,6 @@
             this.label5.Size = new System.Drawing.Size(151, 24);
             this.label5.TabIndex = 27;
             this.label5.Text = "Category Code:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -347,7 +405,6 @@
             this.label4.Size = new System.Drawing.Size(123, 24);
             this.label4.TabIndex = 26;
             this.label4.Text = "Title of Book:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Author
             // 
@@ -358,7 +415,6 @@
             this.Author.Name = "Author";
             this.Author.Size = new System.Drawing.Size(256, 32);
             this.Author.TabIndex = 24;
-            this.Author.TextChanged += new System.EventHandler(this.Author_TextChanged);
             // 
             // Copies
             // 
@@ -369,7 +425,6 @@
             this.Copies.Name = "Copies";
             this.Copies.Size = new System.Drawing.Size(111, 32);
             this.Copies.TabIndex = 23;
-            this.Copies.TextChanged += new System.EventHandler(this.Copies_TextChanged);
             this.Copies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Copies_KeyPress);
             // 
             // Copyrights
@@ -381,7 +436,6 @@
             this.Copyrights.Name = "Copyrights";
             this.Copyrights.Size = new System.Drawing.Size(111, 32);
             this.Copyrights.TabIndex = 22;
-            this.Copyrights.TextChanged += new System.EventHandler(this.Copyrights_TextChanged);
             this.Copyrights.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Copyrights_KeyPress);
             // 
             // CallNumber
@@ -393,7 +447,6 @@
             this.CallNumber.Name = "CallNumber";
             this.CallNumber.Size = new System.Drawing.Size(256, 32);
             this.CallNumber.TabIndex = 21;
-            this.CallNumber.TextChanged += new System.EventHandler(this.CallNumber_TextChanged);
             // 
             // CategoryCode
             // 
@@ -404,7 +457,6 @@
             this.CategoryCode.Name = "CategoryCode";
             this.CategoryCode.Size = new System.Drawing.Size(256, 32);
             this.CategoryCode.TabIndex = 20;
-            this.CategoryCode.TextChanged += new System.EventHandler(this.CategoryCode_TextChanged);
             // 
             // TitleOfBook
             // 
@@ -415,7 +467,6 @@
             this.TitleOfBook.Name = "TitleOfBook";
             this.TitleOfBook.Size = new System.Drawing.Size(256, 73);
             this.TitleOfBook.TabIndex = 19;
-            this.TitleOfBook.TextChanged += new System.EventHandler(this.TitleOfBook_TextChanged);
             // 
             // label10
             // 
@@ -428,7 +479,6 @@
             this.label10.Size = new System.Drawing.Size(175, 37);
             this.label10.TabIndex = 23;
             this.label10.Text = "Book Details";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label3
             // 
@@ -464,7 +514,6 @@
             this.label11.Size = new System.Drawing.Size(73, 24);
             this.label11.TabIndex = 27;
             this.label11.Text = "Search:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // tabControl1
             // 
@@ -481,7 +530,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1434, 624);
             this.tabControl1.TabIndex = 28;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -546,7 +594,6 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblBack);
             this.panel3.Controls.Add(this.txtBookNumber);
-            this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.btnAddBook);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label13);
@@ -589,21 +636,6 @@
             this.txtBookNumber.Name = "txtBookNumber";
             this.txtBookNumber.Size = new System.Drawing.Size(256, 32);
             this.txtBookNumber.TabIndex = 35;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(30)))), ((int)(((byte)(24)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(14, 419);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(109, 40);
-            this.btnCancel.TabIndex = 34;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnAddBook
             // 
@@ -783,74 +815,6 @@
             this.txtTitleofBook.Size = new System.Drawing.Size(256, 32);
             this.txtTitleofBook.TabIndex = 19;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Image = global::STILibrarySystem.Properties.Resources.edit;
-            this.btnEdit.Location = new System.Drawing.Point(3, 509);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(58, 39);
-            this.btnEdit.TabIndex = 36;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Image = global::STILibrarySystem.Properties.Resources.delete;
-            this.btnDelete.Location = new System.Drawing.Point(363, 509);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(49, 40);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnDelete.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.btnDelete.MouseLeave += new System.EventHandler(this.btnDelete_MouseLeave);
-            // 
-            // btnSaveUpdate
-            // 
-            this.btnSaveUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSaveUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(116)))), ((int)(((byte)(169)))));
-            this.btnSaveUpdate.FlatAppearance.BorderSize = 0;
-            this.btnSaveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUpdate.Image = global::STILibrarySystem.Properties.Resources.save;
-            this.btnSaveUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveUpdate.Location = new System.Drawing.Point(11, 509);
-            this.btnSaveUpdate.Name = "btnSaveUpdate";
-            this.btnSaveUpdate.Size = new System.Drawing.Size(207, 40);
-            this.btnSaveUpdate.TabIndex = 33;
-            this.btnSaveUpdate.Text = "Save Changes";
-            this.btnSaveUpdate.UseVisualStyleBackColor = false;
-            this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
-            // 
-            // btnMinimized1
-            // 
-            this.btnMinimized1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized1.FlatAppearance.BorderSize = 0;
-            this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized1.Location = new System.Drawing.Point(1364, 6);
-            this.btnMinimized1.Name = "btnMinimized1";
-            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
-            this.btnMinimized1.TabIndex = 6;
-            this.btnMinimized1.UseVisualStyleBackColor = true;
-            this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::STILibrarySystem.Properties.Resources.sti_logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // ListOfBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -865,6 +829,7 @@
             this.Load += new System.EventHandler(this.ListOfBooks_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listofBooksView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -875,7 +840,6 @@
             this.tabPage2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,7 +874,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label13;

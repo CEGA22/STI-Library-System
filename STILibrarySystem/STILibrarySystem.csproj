@@ -50,9 +50,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudent.cs" />
-    <Compile Include="Books.cs" />
-    <Compile Include="DeleteStudent.cs" />
+    <Compile Include="Model\AddStudent.cs" />
+    <Compile Include="Model\Books.cs" />
+    <Compile Include="Model\DeleteStudent.cs" />
     <Compile Include="Model\AddBooks.cs" />
     <Compile Include="AppConfig.cs" />
     <Compile Include="Model\bookBorrow.cs" />
@@ -61,13 +61,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Students.cs">
+    <Compile Include="View\Students.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Students.Designer.cs">
+    <Compile Include="View\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStudent.cs" />
+    <Compile Include="Model\UpdateStudent.cs" />
     <Compile Include="View\BookList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +117,7 @@
       <DependentUpon>STILibrarySystemDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\UpdateBooks.cs" />
-    <EmbeddedResource Include="Students.resx">
+    <EmbeddedResource Include="View\Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BorrowBook.resx">

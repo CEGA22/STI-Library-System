@@ -15,6 +15,7 @@ namespace STILibrarySystem
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
         HomePage HP;
+        
 
         public Students()
         {
@@ -106,9 +107,6 @@ namespace STILibrarySystem
                     PatronType.Text = row.Cells["Patron Type"].Value.ToString();
                     Program.Text = row.Cells["Program"].Value.ToString();
                     Programshort.Text = row.Cells["Program Short"].Value.ToString();
-                   
-
-
                 }
             }
 
@@ -130,9 +128,18 @@ namespace STILibrarySystem
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            btnEdit.Hide();
-            btnDelete.Show();
-            btnSaveUpdate.Show();
+            if(StudentID.Text == string.Empty)
+            {
+                MessageBox.Show("Please select student", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                btnEdit.Hide();
+                btnDelete.Show();
+                btnSaveUpdate.Show();
+            }
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -147,18 +154,33 @@ namespace STILibrarySystem
             DS.DeleteStudentInfo(StudentID.Text);
             Studentlist();
             btnDelete.Hide();
+            btnSaveUpdate.Hide();
             btnEdit.Show();
             ClearListStudentInfo();
-
-
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            AddStudent AS = new AddStudent();
-            AS.SaveAddStudent(txtStudentID.Text, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text, txtGender.Text, txtPatronType.Text, cbProgram.Text, txtProgramShort.Text);
-            Studentlist();
-            ClearAddStudentInfo();
+            if(txtStudentID.Text == string.Empty)
+            {
+                MessageBox.Show("Please Fill all the details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                AddStudent AS = new AddStudent();
+                AS.SaveAddStudent(txtStudentID.Text, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text, cbProgram.Text, txtProgramShort.Text, txtGender.Text, txtPatronType.Text);
+                Studentlist();
+                ClearAddStudentInfo();
+            }
+              
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            HomePage HP = new HomePage();
+            HP.Show();
+            this.Hide();
         }
     }
 }

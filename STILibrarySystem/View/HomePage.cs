@@ -35,12 +35,12 @@ namespace STILibrarySystem
         
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            btn_borrowedHistory.ForeColor = Color.FromArgb(250, 216, 89);
+            btn_Student.ForeColor = Color.FromArgb(250, 216, 89);
         }
 
         private void btn_borrowedHistory_MouseLeave(object sender, EventArgs e)
         {
-            btn_borrowedHistory.ForeColor = Color.White;
+            btn_Student.ForeColor = Color.White;
         }
 
         private void btn_BorrowBook_MouseEnter(object sender, EventArgs e)
@@ -104,8 +104,7 @@ namespace STILibrarySystem
 
             if(lblaccount.Text.Equals("LIBRARIAN"))
             {
-                btn_borrowedHistory.Hide();
-                panelBorrowedHistory.Hide();
+               
                 lblaccount.Left = 90;
 
             }
