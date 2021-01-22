@@ -30,20 +30,30 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnMinimized = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblaccount = new System.Windows.Forms.Label();
             this.panelBorrowedHistory = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.panelAddBook = new System.Windows.Forms.Panel();
             this.panelListOfBooks = new System.Windows.Forms.Panel();
+            this.btn_ListofBooks = new System.Windows.Forms.Button();
             this.panelReturnBook = new System.Windows.Forms.Panel();
+            this.btn_ReturnBook = new System.Windows.Forms.Button();
             this.panelBorrowBook = new System.Windows.Forms.Panel();
+            this.btn_BorrowBook = new System.Windows.Forms.Button();
+            this.btn_Student = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_date = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,25 +62,15 @@
             this.lbltotalBooks = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnMinimized = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_logout = new System.Windows.Forms.Button();
-            this.btn_ListofBooks = new System.Windows.Forms.Button();
-            this.btn_ReturnBook = new System.Windows.Forms.Button();
-            this.btn_BorrowBook = new System.Windows.Forms.Button();
-            this.btn_borrowedHistory = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -102,6 +102,19 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnMinimized
+            // 
+            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized.FlatAppearance.BorderSize = 0;
+            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
+            this.btnMinimized.Location = new System.Drawing.Point(866, 5);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(36, 23);
+            this.btnMinimized.TabIndex = 15;
+            this.btnMinimized.UseVisualStyleBackColor = true;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -113,6 +126,16 @@
             this.label1.Size = new System.Drawing.Size(298, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "LIBRARY MANAGEMENT";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::STILibrarySystem.Properties.Resources.sti_logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblaccount
             // 
@@ -150,13 +173,37 @@
             this.panel1.Controls.Add(this.panelBorrowBook);
             this.panel1.Controls.Add(this.btn_BorrowBook);
             this.panel1.Controls.Add(this.panelBorrowedHistory);
-            this.panel1.Controls.Add(this.btn_borrowedHistory);
+            this.panel1.Controls.Add(this.btn_Student);
             this.panel1.Controls.Add(this.lblaccount);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(287, 668);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_logout.AutoSize = true;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Image = global::STILibrarySystem.Properties.Resources.exit;
+            this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logout.Location = new System.Drawing.Point(15, 497);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(223, 46);
+            this.btn_logout.TabIndex = 18;
+            this.btn_logout.Text = "LOG OUT";
+            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            this.btn_logout.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
+            this.btn_logout.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
             // 
             // panelAddBook
             // 
@@ -177,6 +224,30 @@
             this.panelListOfBooks.Size = new System.Drawing.Size(270, 1);
             this.panelListOfBooks.TabIndex = 15;
             // 
+            // btn_ListofBooks
+            // 
+            this.btn_ListofBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_ListofBooks.AutoSize = true;
+            this.btn_ListofBooks.FlatAppearance.BorderSize = 0;
+            this.btn_ListofBooks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_ListofBooks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_ListofBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ListofBooks.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ListofBooks.ForeColor = System.Drawing.Color.White;
+            this.btn_ListofBooks.Image = global::STILibrarySystem.Properties.Resources.check_mark;
+            this.btn_ListofBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ListofBooks.Location = new System.Drawing.Point(10, 345);
+            this.btn_ListofBooks.Name = "btn_ListofBooks";
+            this.btn_ListofBooks.Size = new System.Drawing.Size(223, 46);
+            this.btn_ListofBooks.TabIndex = 14;
+            this.btn_ListofBooks.Text = "LIST OF BOOKS";
+            this.btn_ListofBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ListofBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ListofBooks.UseVisualStyleBackColor = true;
+            this.btn_ListofBooks.Click += new System.EventHandler(this.button4_Click);
+            this.btn_ListofBooks.MouseEnter += new System.EventHandler(this.btn_ListofBooks_MouseEnter);
+            this.btn_ListofBooks.MouseLeave += new System.EventHandler(this.btn_ListofBooks_MouseLeave);
+            // 
             // panelReturnBook
             // 
             this.panelReturnBook.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -186,6 +257,30 @@
             this.panelReturnBook.Size = new System.Drawing.Size(270, 1);
             this.panelReturnBook.TabIndex = 13;
             // 
+            // btn_ReturnBook
+            // 
+            this.btn_ReturnBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_ReturnBook.AutoSize = true;
+            this.btn_ReturnBook.FlatAppearance.BorderSize = 0;
+            this.btn_ReturnBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_ReturnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_ReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ReturnBook.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReturnBook.ForeColor = System.Drawing.Color.White;
+            this.btn_ReturnBook.Image = global::STILibrarySystem.Properties.Resources.left_arrow;
+            this.btn_ReturnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ReturnBook.Location = new System.Drawing.Point(13, 273);
+            this.btn_ReturnBook.Name = "btn_ReturnBook";
+            this.btn_ReturnBook.Size = new System.Drawing.Size(267, 46);
+            this.btn_ReturnBook.TabIndex = 12;
+            this.btn_ReturnBook.Text = "RETURN BOOK";
+            this.btn_ReturnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ReturnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReturnBook.UseVisualStyleBackColor = true;
+            this.btn_ReturnBook.Click += new System.EventHandler(this.btn_ReturnBook_Click);
+            this.btn_ReturnBook.MouseEnter += new System.EventHandler(this.btn_ReturnBook_MouseEnter);
+            this.btn_ReturnBook.MouseLeave += new System.EventHandler(this.btn_ReturnBook_MouseLeave);
+            // 
             // panelBorrowBook
             // 
             this.panelBorrowBook.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -194,6 +289,66 @@
             this.panelBorrowBook.Name = "panelBorrowBook";
             this.panelBorrowBook.Size = new System.Drawing.Size(270, 1);
             this.panelBorrowBook.TabIndex = 11;
+            // 
+            // btn_BorrowBook
+            // 
+            this.btn_BorrowBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_BorrowBook.AutoSize = true;
+            this.btn_BorrowBook.FlatAppearance.BorderSize = 0;
+            this.btn_BorrowBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_BorrowBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_BorrowBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BorrowBook.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BorrowBook.ForeColor = System.Drawing.Color.White;
+            this.btn_BorrowBook.Image = global::STILibrarySystem.Properties.Resources.open_book;
+            this.btn_BorrowBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BorrowBook.Location = new System.Drawing.Point(15, 204);
+            this.btn_BorrowBook.Name = "btn_BorrowBook";
+            this.btn_BorrowBook.Size = new System.Drawing.Size(267, 46);
+            this.btn_BorrowBook.TabIndex = 10;
+            this.btn_BorrowBook.Text = "BORROW BOOK";
+            this.btn_BorrowBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BorrowBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_BorrowBook.UseVisualStyleBackColor = true;
+            this.btn_BorrowBook.Click += new System.EventHandler(this.btn_BorrowBook_Click);
+            this.btn_BorrowBook.MouseEnter += new System.EventHandler(this.btn_BorrowBook_MouseEnter);
+            this.btn_BorrowBook.MouseLeave += new System.EventHandler(this.btn_BorrowBook_MouseLeave);
+            // 
+            // btn_Student
+            // 
+            this.btn_Student.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Student.AutoSize = true;
+            this.btn_Student.FlatAppearance.BorderSize = 0;
+            this.btn_Student.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_Student.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btn_Student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Student.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Student.ForeColor = System.Drawing.Color.White;
+            this.btn_Student.Image = global::STILibrarySystem.Properties.Resources._class;
+            this.btn_Student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Student.Location = new System.Drawing.Point(14, 419);
+            this.btn_Student.Name = "btn_Student";
+            this.btn_Student.Size = new System.Drawing.Size(267, 46);
+            this.btn_Student.TabIndex = 8;
+            this.btn_Student.Text = "STUDENTS";
+            this.btn_Student.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Student.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Student.UseVisualStyleBackColor = true;
+            this.btn_Student.Click += new System.EventHandler(this.btn_borrowedHistory_Click);
+            this.btn_Student.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.btn_Student.MouseLeave += new System.EventHandler(this.btn_borrowedHistory_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.Image = global::STILibrarySystem.Properties.Resources.man;
+            this.pictureBox2.Location = new System.Drawing.Point(111, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -256,6 +411,18 @@
             this.panel4.Size = new System.Drawing.Size(919, 21);
             this.panel4.TabIndex = 17;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = global::STILibrarySystem.Properties.Resources.open_book1;
+            this.pictureBox5.Location = new System.Drawing.Point(-72, -243);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1056, 112);
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -268,6 +435,18 @@
             this.label11.Size = new System.Drawing.Size(207, 43);
             this.label11.TabIndex = 19;
             this.label11.Text = "lbltotalBooks";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::STILibrarySystem.Properties.Resources.open_book1;
+            this.pictureBox4.Location = new System.Drawing.Point(-75, -243);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1056, 112);
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
             // 
             // label9
             // 
@@ -377,185 +556,6 @@
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = global::STILibrarySystem.Properties.Resources.open_book1;
-            this.pictureBox5.Location = new System.Drawing.Point(-72, -243);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1056, 112);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::STILibrarySystem.Properties.Resources.open_book1;
-            this.pictureBox4.Location = new System.Drawing.Point(-75, -243);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1056, 112);
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnMinimized
-            // 
-            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.FlatAppearance.BorderSize = 0;
-            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized.Location = new System.Drawing.Point(866, 5);
-            this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(36, 23);
-            this.btnMinimized.TabIndex = 15;
-            this.btnMinimized.UseVisualStyleBackColor = true;
-            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::STILibrarySystem.Properties.Resources.sti_logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_logout.AutoSize = true;
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Image = global::STILibrarySystem.Properties.Resources.exit;
-            this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(15, 497);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(223, 46);
-            this.btn_logout.TabIndex = 18;
-            this.btn_logout.Text = "LOG OUT";
-            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_logout.UseVisualStyleBackColor = true;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
-            this.btn_logout.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
-            this.btn_logout.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
-            // 
-            // btn_ListofBooks
-            // 
-            this.btn_ListofBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_ListofBooks.AutoSize = true;
-            this.btn_ListofBooks.FlatAppearance.BorderSize = 0;
-            this.btn_ListofBooks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_ListofBooks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_ListofBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ListofBooks.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ListofBooks.ForeColor = System.Drawing.Color.White;
-            this.btn_ListofBooks.Image = global::STILibrarySystem.Properties.Resources.check_mark;
-            this.btn_ListofBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ListofBooks.Location = new System.Drawing.Point(10, 345);
-            this.btn_ListofBooks.Name = "btn_ListofBooks";
-            this.btn_ListofBooks.Size = new System.Drawing.Size(223, 46);
-            this.btn_ListofBooks.TabIndex = 14;
-            this.btn_ListofBooks.Text = "LIST OF BOOKS";
-            this.btn_ListofBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ListofBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ListofBooks.UseVisualStyleBackColor = true;
-            this.btn_ListofBooks.Click += new System.EventHandler(this.button4_Click);
-            this.btn_ListofBooks.MouseEnter += new System.EventHandler(this.btn_ListofBooks_MouseEnter);
-            this.btn_ListofBooks.MouseLeave += new System.EventHandler(this.btn_ListofBooks_MouseLeave);
-            // 
-            // btn_ReturnBook
-            // 
-            this.btn_ReturnBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_ReturnBook.AutoSize = true;
-            this.btn_ReturnBook.FlatAppearance.BorderSize = 0;
-            this.btn_ReturnBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_ReturnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_ReturnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ReturnBook.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReturnBook.ForeColor = System.Drawing.Color.White;
-            this.btn_ReturnBook.Image = global::STILibrarySystem.Properties.Resources.left_arrow;
-            this.btn_ReturnBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ReturnBook.Location = new System.Drawing.Point(13, 273);
-            this.btn_ReturnBook.Name = "btn_ReturnBook";
-            this.btn_ReturnBook.Size = new System.Drawing.Size(267, 46);
-            this.btn_ReturnBook.TabIndex = 12;
-            this.btn_ReturnBook.Text = "RETURN BOOK";
-            this.btn_ReturnBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ReturnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReturnBook.UseVisualStyleBackColor = true;
-            this.btn_ReturnBook.Click += new System.EventHandler(this.btn_ReturnBook_Click);
-            this.btn_ReturnBook.MouseEnter += new System.EventHandler(this.btn_ReturnBook_MouseEnter);
-            this.btn_ReturnBook.MouseLeave += new System.EventHandler(this.btn_ReturnBook_MouseLeave);
-            // 
-            // btn_BorrowBook
-            // 
-            this.btn_BorrowBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_BorrowBook.AutoSize = true;
-            this.btn_BorrowBook.FlatAppearance.BorderSize = 0;
-            this.btn_BorrowBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_BorrowBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_BorrowBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BorrowBook.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BorrowBook.ForeColor = System.Drawing.Color.White;
-            this.btn_BorrowBook.Image = global::STILibrarySystem.Properties.Resources.open_book;
-            this.btn_BorrowBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BorrowBook.Location = new System.Drawing.Point(15, 204);
-            this.btn_BorrowBook.Name = "btn_BorrowBook";
-            this.btn_BorrowBook.Size = new System.Drawing.Size(267, 46);
-            this.btn_BorrowBook.TabIndex = 10;
-            this.btn_BorrowBook.Text = "BORROW BOOK";
-            this.btn_BorrowBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BorrowBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_BorrowBook.UseVisualStyleBackColor = true;
-            this.btn_BorrowBook.Click += new System.EventHandler(this.btn_BorrowBook_Click);
-            this.btn_BorrowBook.MouseEnter += new System.EventHandler(this.btn_BorrowBook_MouseEnter);
-            this.btn_BorrowBook.MouseLeave += new System.EventHandler(this.btn_BorrowBook_MouseLeave);
-            // 
-            // btn_borrowedHistory
-            // 
-            this.btn_borrowedHistory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_borrowedHistory.AutoSize = true;
-            this.btn_borrowedHistory.FlatAppearance.BorderSize = 0;
-            this.btn_borrowedHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_borrowedHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btn_borrowedHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_borrowedHistory.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_borrowedHistory.ForeColor = System.Drawing.Color.White;
-            this.btn_borrowedHistory.Image = global::STILibrarySystem.Properties.Resources._class;
-            this.btn_borrowedHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrowedHistory.Location = new System.Drawing.Point(14, 419);
-            this.btn_borrowedHistory.Name = "btn_borrowedHistory";
-            this.btn_borrowedHistory.Size = new System.Drawing.Size(267, 46);
-            this.btn_borrowedHistory.TabIndex = 8;
-            this.btn_borrowedHistory.Text = "STUDENTS";
-            this.btn_borrowedHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_borrowedHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_borrowedHistory.UseVisualStyleBackColor = true;
-            this.btn_borrowedHistory.Click += new System.EventHandler(this.btn_borrowedHistory_Click);
-            this.btn_borrowedHistory.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.btn_borrowedHistory.MouseLeave += new System.EventHandler(this.btn_borrowedHistory_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.Image = global::STILibrarySystem.Properties.Resources.man;
-            this.pictureBox2.Location = new System.Drawing.Point(111, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,17 +576,17 @@
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,7 +598,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblaccount;
-        private System.Windows.Forms.Button btn_borrowedHistory;
+        private System.Windows.Forms.Button btn_Student;
         private System.Windows.Forms.Panel panelBorrowedHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_logout;

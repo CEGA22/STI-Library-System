@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMinimized1 = new System.Windows.Forms.Button();
             this.lbl_exit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.ReturnedBookList = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnProceed = new System.Windows.Forms.Button();
-            this.btnMinimized1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.StudentInfoPanel.SuspendLayout();
@@ -82,6 +82,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1261, 85);
             this.panel2.TabIndex = 4;
+            // 
+            // btnMinimized1
+            // 
+            this.btnMinimized1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized1.FlatAppearance.BorderSize = 0;
+            this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
+            this.btnMinimized1.Location = new System.Drawing.Point(1147, 6);
+            this.btnMinimized1.Name = "btnMinimized1";
+            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
+            this.btnMinimized1.TabIndex = 7;
+            this.btnMinimized1.UseVisualStyleBackColor = true;
+            this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
             // 
             // lbl_exit
             // 
@@ -426,10 +439,10 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(11, 736);
+            this.btnCancel.Location = new System.Drawing.Point(11, 725);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 35);
+            this.btnCancel.Size = new System.Drawing.Size(114, 46);
             this.btnCancel.TabIndex = 26;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -442,27 +455,14 @@
             this.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceed.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceed.ForeColor = System.Drawing.Color.White;
-            this.btnProceed.Location = new System.Drawing.Point(1060, 725);
+            this.btnProceed.Location = new System.Drawing.Point(1075, 726);
             this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(128, 52);
+            this.btnProceed.Size = new System.Drawing.Size(113, 45);
             this.btnProceed.TabIndex = 25;
             this.btnProceed.Text = "Proceed";
             this.btnProceed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProceed.UseVisualStyleBackColor = false;
             this.btnProceed.Click += new System.EventHandler(this.btnProceed_Click);
-            // 
-            // btnMinimized1
-            // 
-            this.btnMinimized1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized1.FlatAppearance.BorderSize = 0;
-            this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized1.Location = new System.Drawing.Point(1147, 6);
-            this.btnMinimized1.Name = "btnMinimized1";
-            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
-            this.btnMinimized1.TabIndex = 7;
-            this.btnMinimized1.UseVisualStyleBackColor = true;
-            this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
             // 
             // Return_Book
             // 
