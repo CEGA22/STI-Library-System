@@ -62,7 +62,7 @@ namespace STILibrarySystem
         {
             if (txtStudentNo.Text == String.Empty )
             {
-                MessageBox.Show("Enter Your Student No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter Your Student No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
@@ -136,46 +136,20 @@ namespace STILibrarySystem
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are You Sure You Want To Returned this Book?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if(txtBookNumber.Text == string.Empty)
             {
-                try
-                {
-
-                    var command1 = new SqlCommand("UPDATE List_of_books SET copies = copies + 1 WHERE book_number = " + int.Parse(txtBookNumber.Text), con);
-
-
-                    con.Open();
-                    command1.ExecuteNonQuery();
-                    con.Close();
-
-
-                    SqlCommand command = new SqlCommand("DELETE FROM borrow_books WHERE book_no = " + int.Parse(txtBookNumber.Text), con);
-                    con.Open();
-                    command.ExecuteNonQuery();
-                    con.Close();
-
-
-                    MessageBox.Show("Returned Book Successfully", "Successfully Complete!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ReturnedBookList.Hide();
-                    clear();
-                    txtStudentNo.ReadOnly = false;
-
-
-
-                }
-
-                catch (Exception e1)
-                {
-                    MessageBox.Show(e1.Message);
-                }
+                MessageBox.Show("Please select the book you want to return", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
-                //Do Somethins
+                BookReturn BR = new BookReturn();
+                BR.issuedBook(txtBookNumber.Text);
+                ReturnedBookList.Hide();
+                clear();
+                txtStudentNo.ReadOnly = false;
             }
+           
 
         }
 

@@ -389,7 +389,7 @@
             this.panel1.Controls.Add(this.lbl_Author);
             this.panel1.Location = new System.Drawing.Point(626, 200);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 213);
+            this.panel1.Size = new System.Drawing.Size(576, 213);
             this.panel1.TabIndex = 21;
             // 
             // ReturnedBookList
@@ -428,7 +428,7 @@
             this.ReturnedBookList.RowHeadersVisible = false;
             this.ReturnedBookList.RowHeadersWidth = 70;
             this.ReturnedBookList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ReturnedBookList.Size = new System.Drawing.Size(1177, 263);
+            this.ReturnedBookList.Size = new System.Drawing.Size(1191, 263);
             this.ReturnedBookList.TabIndex = 23;
             this.ReturnedBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReturnedBookList_CellClick);
             // 
@@ -457,7 +457,7 @@
             this.btnProceed.ForeColor = System.Drawing.Color.White;
             this.btnProceed.Location = new System.Drawing.Point(1075, 726);
             this.btnProceed.Name = "btnProceed";
-            this.btnProceed.Size = new System.Drawing.Size(113, 45);
+            this.btnProceed.Size = new System.Drawing.Size(127, 45);
             this.btnProceed.TabIndex = 25;
             this.btnProceed.Text = "Proceed";
             this.btnProceed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

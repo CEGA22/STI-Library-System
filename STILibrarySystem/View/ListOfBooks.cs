@@ -17,11 +17,8 @@ namespace STILibrarySystem
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
         public int booknumber;
         HomePage HP;
-        string edit;
+       
         
-        
-        
-
         public ListOfBooks()
         {
             InitializeComponent();
@@ -29,12 +26,9 @@ namespace STILibrarySystem
             booklist();
             btnDelete.Hide();
             btnSaveUpdate.Hide();
-            
-          
            
         }
 
-      
         public void TxtboxClear()
         {
             txtBookNumber.Text = "";
@@ -45,6 +39,7 @@ namespace STILibrarySystem
             txtCopyrights.Text = "";
             txtCopies.Text = "";
             txtDaysReturn.Text = "";
+            txtbook.Text = "";
 
             TitleOfBook.Text = "";
             CategoryCode.Text = "";
@@ -52,12 +47,11 @@ namespace STILibrarySystem
             CallNumber.Text = "";
             Copyrights.Text = "";
             Copies.Text = "";
-           textBox1.Text = "";
+            textBox1.Text = "";
         }
 
         public void ReadOnlyFalse()
         {
-           
             TitleOfBook.ReadOnly = false;
             CategoryCode.ReadOnly = false;
             Author.ReadOnly = false;
@@ -69,8 +63,6 @@ namespace STILibrarySystem
 
         public void booklist()
         {
-            
-
             var cmd = new SqlCommand("SELECT book_number as 'Book Number', title_of_book as 'Title of Book', category_code as 'Category Code', author as 'Author', call_number as 'Call Number', copyrights as 'Copyrights', copies as 'Copies', days_of_return as 'Days of Return' FROM List_of_Books", con);
             var dt = new DataTable();
             con.Open();
@@ -79,7 +71,6 @@ namespace STILibrarySystem
 
             con.Close();
             listofBooksView.DataSource = dt;
-
         }
 
        
@@ -99,8 +90,6 @@ namespace STILibrarySystem
             }
         }
 
-        
-
         private void listofBooksView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -117,8 +106,6 @@ namespace STILibrarySystem
                     Copyrights.Text = row.Cells["Copyrights"].Value.ToString();
                     Copies.Text = row.Cells["Copies"].Value.ToString();
                     textBox1.Text = row.Cells["Days of Return"].Value.ToString();
-
-
                 }
             }
 
@@ -126,28 +113,19 @@ namespace STILibrarySystem
             {
                 MessageBox.Show(e1.Message);
             }
-            
-
-
         }
 
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            
                 AddBooks AB = new AddBooks();
                 AB.SaveAddBooks(txtBookNumber.Text, txtTitleofBook.Text, txtCategoryCode.Text, txtAuthor.Text, txtCallNumber.Text, txtCopyrights.Text, txtCopies.Text, txtDaysReturn.Text);
                 booklist();
-                TxtboxClear();
-            
-            
+                TxtboxClear(); 
         }
-
-       
 
         private void label3_Click(object sender, EventArgs e)
         {
-            
             HP.Show();
             this.Hide();
         }
@@ -155,8 +133,6 @@ namespace STILibrarySystem
       
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-           
-
             SqlDataAdapter adapt = new SqlDataAdapter("SELECT book_number as 'Book Number', title_of_book as 'Title of Book', category_code as 'Category Code', author as 'Author', call_number as 'Call Number', copyrights as 'Copyrights', copies as 'Copies' FROM List_of_Books WHERE title_of_book LIKE '%" + txtSearch.Text + "%'", con);
             con.Open();
             var dt = new DataTable();
@@ -164,8 +140,6 @@ namespace STILibrarySystem
             listofBooksView.DataSource = dt;
             con.Close();
         }
-
-        
 
         private void label21_Click(object sender, EventArgs e)
         {
@@ -175,7 +149,6 @@ namespace STILibrarySystem
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
-           
             UpdateBooks UB = new UpdateBooks();
             UB.SaveUpdateBooks(TitleOfBook.Text, CategoryCode.Text, Author.Text, CallNumber.Text, Copyrights.Text, Copies.Text, textBox1.Text, txtbook.Text);
             booklist();
@@ -213,14 +186,14 @@ namespace STILibrarySystem
             if (position.Equals("librarian"))
             {
                 tabControl1.TabPages.Remove(tabPage2);
-            }
-               
-            
+                btnEdit.Hide();
+                
+            }    
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(txtBookNumber.Text == string.Empty)
+            if(txtbook.Text == string.Empty)
             {
                 MessageBox.Show("Please select book", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -230,19 +203,16 @@ namespace STILibrarySystem
                 btnDelete.Show();
                 btnSaveUpdate.Show();
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-          
         }
 
         private void btnMinimized_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
-           
         }
 
         private void btnMinimized1_Click(object sender, EventArgs e)
@@ -293,8 +263,6 @@ namespace STILibrarySystem
         private void txtDaysReturn_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-       
+        }  
     }
 }

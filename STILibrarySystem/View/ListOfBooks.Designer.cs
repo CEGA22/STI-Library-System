@@ -143,9 +143,9 @@
             this.btnMinimized1.FlatAppearance.BorderSize = 0;
             this.btnMinimized1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimized1.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized1.Location = new System.Drawing.Point(1364, 6);
+            this.btnMinimized1.Location = new System.Drawing.Point(1361, 0);
             this.btnMinimized1.Name = "btnMinimized1";
-            this.btnMinimized1.Size = new System.Drawing.Size(34, 23);
+            this.btnMinimized1.Size = new System.Drawing.Size(34, 38);
             this.btnMinimized1.TabIndex = 6;
             this.btnMinimized1.UseVisualStyleBackColor = true;
             this.btnMinimized1.Click += new System.EventHandler(this.btnMinimized1_Click);
@@ -509,11 +509,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(709, 21);
+            this.label11.Location = new System.Drawing.Point(597, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 24);
+            this.label11.Size = new System.Drawing.Size(191, 24);
             this.label11.TabIndex = 27;
-            this.label11.Text = "Search:";
+            this.label11.Text = "Search title of book: ";
             // 
             // tabControl1
             // 
