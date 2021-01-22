@@ -50,17 +50,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookReturn.cs" />
     <Compile Include="Model\AddStudent.cs" />
     <Compile Include="Model\Books.cs" />
     <Compile Include="Model\DeleteStudent.cs" />
     <Compile Include="Model\AddBooks.cs" />
     <Compile Include="AppConfig.cs" />
     <Compile Include="Model\bookBorrow.cs" />
+    <Compile Include="PendingBooks.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TotalStudents.cs" />
     <Compile Include="View\Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +79,6 @@
     </Compile>
     <Compile Include="View\BorrowBook.Designer.cs">
       <DependentUpon>BorrowBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\borrowBookConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\borrowBookConfirmation.Designer.cs">
-      <DependentUpon>borrowBookConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DeleteBook.cs" />
     <Compile Include="View\LoginPage.cs">

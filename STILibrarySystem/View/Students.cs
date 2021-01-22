@@ -15,7 +15,6 @@ namespace STILibrarySystem
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
         HomePage HP;
-        
 
         public Students()
         {
@@ -87,8 +86,7 @@ namespace STILibrarySystem
             btnSaveUpdate.Hide();
             btnDelete.Hide();
             btnEdit.Show();
-            ClearListStudentInfo();
-            
+            ClearListStudentInfo();    
         }
 
         private void listofStudentsView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -104,9 +102,9 @@ namespace STILibrarySystem
                     Lastname.Text = row.Cells["Lastname"].Value.ToString();
                     Middlename.Text = row.Cells["Middlename"].Value.ToString();
                     Gender.Text = row.Cells["Gender"].Value.ToString();
-                    PatronType.Text = row.Cells["Patron Type"].Value.ToString();
                     Program.Text = row.Cells["Program"].Value.ToString();
                     Programshort.Text = row.Cells["Program Short"].Value.ToString();
+                    PatronType.Text = row.Cells["Patron type"].Value.ToString();
                 }
             }
 
@@ -118,12 +116,21 @@ namespace STILibrarySystem
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SqlDataAdapter adapt = new SqlDataAdapter("SELECT student_id as 'Student ID', firstname as 'Firstname', lastname as 'Lastname', middlename as 'Middlename', program as 'Program', program_short as 'Program Short', sex as 'Gender' FROM student_information WHERE student_id LIKE '%" + txtSearch.Text + "%'", con);
-            con.Open();
-            var dt = new DataTable();
-            adapt.Fill(dt);
-            listofStudentsView.DataSource = dt;
-            con.Close();
+            try
+            {
+                SqlDataAdapter adapt = new SqlDataAdapter("SELECT student_id as 'Student ID', firstname as 'Firstname', lastname as 'Lastname', middlename as 'Middlename', program as 'Program', program_short as 'Program Short', sex as 'Gender', patron_type as 'Patron type' FROM student_information WHERE student_id LIKE '%" + txtSearch.Text + "%'", con);
+                con.Open();
+                var dt = new DataTable();
+                adapt.Fill(dt);
+                listofStudentsView.DataSource = dt;
+                con.Close();
+            }
+
+            catch(Exception e1)
+            {
+                MessageBox.Show(e1.Message);
+            }
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -181,6 +188,17 @@ namespace STILibrarySystem
             HomePage HP = new HomePage();
             HP.Show();
             this.Hide();
+        }
+
+        private void Students_Load(object sender, EventArgs e)
+        {
+            string position = login.position;
+
+            if (position.Equals("librarian"))
+            {
+                tabControl1.TabPages.Remove(tabPage2);
+                btnEdit.Hide();
+            }
         }
     }
 }

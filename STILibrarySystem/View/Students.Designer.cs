@@ -69,6 +69,8 @@ namespace STILibrarySystem
             this.label21 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.cbProgram = new System.Windows.Forms.ComboBox();
             this.txtPatronType = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtProgramShort = new System.Windows.Forms.TextBox();
@@ -84,8 +86,6 @@ namespace STILibrarySystem
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.cbProgram = new System.Windows.Forms.ComboBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -224,11 +224,11 @@ namespace STILibrarySystem
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(700, 21);
+            this.label11.Location = new System.Drawing.Point(598, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 24);
+            this.label11.Size = new System.Drawing.Size(182, 24);
             this.label11.TabIndex = 27;
-            this.label11.Text = "Search:";
+            this.label11.Text = "Search student no. : ";
             // 
             // txtSearch
             // 
@@ -642,6 +642,29 @@ namespace STILibrarySystem
             this.panel3.Size = new System.Drawing.Size(1385, 536);
             this.panel3.TabIndex = 25;
             // 
+            // txtGender
+            // 
+            this.txtGender.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.Location = new System.Drawing.Point(647, 323);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(225, 30);
+            this.txtGender.TabIndex = 53;
+            // 
+            // cbProgram
+            // 
+            this.cbProgram.FormattingEnabled = true;
+            this.cbProgram.Items.AddRange(new object[] {
+            "BS Information Technology",
+            "BS Computer Science",
+            "BS Information Systems",
+            "BS in Accountancy",
+            "BS in Hospitality Management",
+            "BS in Tourism Management"});
+            this.cbProgram.Location = new System.Drawing.Point(647, 427);
+            this.cbProgram.Name = "cbProgram";
+            this.cbProgram.Size = new System.Drawing.Size(225, 27);
+            this.cbProgram.TabIndex = 52;
+            // 
             // txtPatronType
             // 
             this.txtPatronType.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -785,29 +808,6 @@ namespace STILibrarySystem
             this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // cbProgram
-            // 
-            this.cbProgram.FormattingEnabled = true;
-            this.cbProgram.Items.AddRange(new object[] {
-            "BS Information Technology",
-            "BS Computer Science",
-            "BS Information Systems",
-            "BS in Accountancy",
-            "BS in Hospitality Management",
-            "BS in Tourism Management"});
-            this.cbProgram.Location = new System.Drawing.Point(647, 427);
-            this.cbProgram.Name = "cbProgram";
-            this.cbProgram.Size = new System.Drawing.Size(225, 27);
-            this.cbProgram.TabIndex = 52;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(647, 323);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(225, 30);
-            this.txtGender.TabIndex = 53;
-            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,6 +819,7 @@ namespace STILibrarySystem
             this.Name = "Students";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Students";
+            this.Load += new System.EventHandler(this.Students_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
