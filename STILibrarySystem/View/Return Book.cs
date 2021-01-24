@@ -89,7 +89,7 @@ namespace STILibrarySystem
                     else
                     {
                         ReturnedBookList.Hide();
-                        MessageBox.Show("Book is not borrowed with this student no. or Invalid Student No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Book is not borrowed with this student no. or Invalid Student No.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtStudentNo.Text = "";
                     }
                     con.Close();

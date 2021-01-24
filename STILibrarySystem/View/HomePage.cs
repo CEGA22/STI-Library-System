@@ -102,11 +102,11 @@ namespace STILibrarySystem
             DateTime date = DateTime.Now;
             lbl_date.Text = date.ToString("dddd MMMM dd,yyyy hh:mm tt");
             lblaccount.Text = login.position.ToUpper();
+            lblaccount.TextAlign = ContentAlignment.TopCenter;
+            lblaccountname.Text = login.firstname.ToUpper() + " " + login.lastname.ToUpper();
+            lblaccountname.TextAlign = ContentAlignment.TopCenter;
 
-            if(lblaccount.Text.Equals("LIBRARIAN"))
-            {
-                lblaccount.Left = 90;
-            }
+           
         }
 
         private void btn_BorrowBook_Click(object sender, EventArgs e)

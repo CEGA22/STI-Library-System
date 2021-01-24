@@ -71,6 +71,7 @@
             this.btnTotalBooks = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblaccountname = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -93,9 +94,9 @@
             this.panel2.Controls.Add(this.btnMinimized);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(286, 0);
+            this.panel2.Location = new System.Drawing.Point(287, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1039, 85);
+            this.panel2.Size = new System.Drawing.Size(1038, 85);
             this.panel2.TabIndex = 1;
             // 
             // btnExit
@@ -105,7 +106,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1002, 0);
+            this.btnExit.Location = new System.Drawing.Point(1001, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(37, 38);
             this.btnExit.TabIndex = 20;
@@ -119,7 +120,7 @@
             this.btnMinimized.FlatAppearance.BorderSize = 0;
             this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimized.Image = global::STILibrarySystem.Properties.Resources.Minimized_Icon_16px;
-            this.btnMinimized.Location = new System.Drawing.Point(971, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(970, 0);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(36, 28);
             this.btnMinimized.TabIndex = 15;
@@ -150,16 +151,15 @@
             // 
             // lblaccount
             // 
-            this.lblaccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblaccount.AutoSize = true;
+            this.lblaccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblaccount.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblaccount.ForeColor = System.Drawing.Color.White;
-            this.lblaccount.Location = new System.Drawing.Point(63, 135);
+            this.lblaccount.Location = new System.Drawing.Point(14, 110);
             this.lblaccount.Name = "lblaccount";
-            this.lblaccount.Size = new System.Drawing.Size(0, 28);
+            this.lblaccount.Size = new System.Drawing.Size(266, 28);
             this.lblaccount.TabIndex = 2;
-            this.lblaccount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblaccount.Text = "LIBRARIAN";
+            this.lblaccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelBorrowedHistory
             // 
@@ -175,6 +175,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.lblaccountname);
             this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.panelAddBook);
             this.panel1.Controls.Add(this.panelListOfBooks);
@@ -354,7 +355,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = global::STILibrarySystem.Properties.Resources.man;
-            this.pictureBox2.Location = new System.Drawing.Point(111, 58);
+            this.pictureBox2.Location = new System.Drawing.Point(109, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -696,6 +697,18 @@
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter_1);
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave_1);
             // 
+            // lblaccountname
+            // 
+            this.lblaccountname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblaccountname.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaccountname.ForeColor = System.Drawing.Color.White;
+            this.lblaccountname.Location = new System.Drawing.Point(18, 140);
+            this.lblaccountname.Name = "lblaccountname";
+            this.lblaccountname.Size = new System.Drawing.Size(254, 23);
+            this.lblaccountname.TabIndex = 19;
+            this.lblaccountname.Text = "Account name";
+            this.lblaccountname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -784,5 +797,6 @@
         private System.Windows.Forms.Button btnTotalBooks;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblaccountname;
     }
 }

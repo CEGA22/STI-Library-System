@@ -72,8 +72,8 @@ namespace STILibrarySystem
                         txtMiddleName.Text = (sdr["middlename"].ToString());
                         txtPatronType.Text = (sdr["patron_type"].ToString());
                         txtDepartment.Text = (sdr["program_short"].ToString());
-
                         bookdetailsEnabled();
+                        txtStudentNo.ReadOnly = true;
 
                     }
 
@@ -95,9 +95,9 @@ namespace STILibrarySystem
 
         private void btnSearchBook_Click(object sender, EventArgs e)
         {
-            
             try
             {
+              
                 SqlCommand cmd = new SqlCommand("SELECT book_number, title_of_book, category_code, author, call_number, copyrights, copies, days_of_return FROM List_of_Books WHERE book_number = " + int.Parse(txtBookNumber.Text), con);
                 con.Open();
                 SqlDataReader sdr = cmd.ExecuteReader();
@@ -116,6 +116,7 @@ namespace STILibrarySystem
                     {
                         txtTitleofBook.Text = (sdr["title_of_book"].ToString());
                         txtAuthor.Text = (sdr["Author"].ToString());
+                        txtBookNumber.ReadOnly = true;
                     }
                    
                 }
@@ -187,18 +188,16 @@ namespace STILibrarySystem
                 BookBorrow.book_Borrow(txtStudentNo.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPatronType.Text, txtDepartment.Text, txtBookNumber.Text, txtTitleofBook.Text, txtAuthor.Text);
                 bookdetailsdisabled();
                 studentbookInfoCleared();
+
             }
-
-           
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            HomePage HP = new HomePage();
-            HP.Show();
-            this.Hide();
+            txtStudentNo.ReadOnly = false;
+            txtBookNumber.ReadOnly = false;
+            studentbookInfoCleared();
+
         }
 
         private void BorrowBook_Load(object sender, EventArgs e)
@@ -219,6 +218,13 @@ namespace STILibrarySystem
         private void btnMinimized1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label11_Click_1(object sender, EventArgs e)
+        {
+            HomePage HP = new HomePage();
+            HP.Show();
+            this.Hide();
         }
     }
 }
