@@ -31,7 +31,7 @@ namespace STILibrarySystem
             Firstname.Text = "";
             Lastname.Text = "";
             Middlename.Text = "";
-            Gender.Text = "";
+            cbGender.Text = "";
             PatronType.Text = "";
             Program.Text = "";
             Programshort.Text = "";
@@ -42,10 +42,10 @@ namespace STILibrarySystem
             txtFirstname.Text = "";
             txtLastname.Text = "";
             txtMiddlename.Text = "";
-            txtGender.Text = "";
+            Gender.Text = "";
             txtPatronType.Text = "";
             cbProgram.Text = "";
-            txtProgramShort.Text = "";
+            txtProgram.Text = "";
         }
 
         public void Studentlist()
@@ -81,7 +81,7 @@ namespace STILibrarySystem
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
             UpdateStudent US = new UpdateStudent();
-            US.SaveUpdateStudent(StudentID.Text, Firstname.Text, Lastname.Text, Middlename.Text, Gender.Text, PatronType.Text, Program.Text, Programshort.Text);
+            US.SaveUpdateStudent(StudentID.Text, Firstname.Text, Lastname.Text, Middlename.Text, cbGender.Text, PatronType.Text, Program.Text, Programshort.Text);
             Studentlist();
             btnSaveUpdate.Hide();
             btnDelete.Hide();
@@ -101,7 +101,7 @@ namespace STILibrarySystem
                     Firstname.Text = row.Cells["Firstname"].Value.ToString();
                     Lastname.Text = row.Cells["Lastname"].Value.ToString();
                     Middlename.Text = row.Cells["Middlename"].Value.ToString();
-                    Gender.Text = row.Cells["Gender"].Value.ToString();
+                    cbGender.Text = row.Cells["Gender"].Value.ToString();
                     Program.Text = row.Cells["Program"].Value.ToString();
                     Programshort.Text = row.Cells["Program Short"].Value.ToString();
                     PatronType.Text = row.Cells["Patron type"].Value.ToString();
@@ -164,6 +164,8 @@ namespace STILibrarySystem
             btnSaveUpdate.Hide();
             btnEdit.Show();
             ClearListStudentInfo();
+
+
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -176,7 +178,7 @@ namespace STILibrarySystem
             else
             {
                 AddStudent AS = new AddStudent();
-                AS.SaveAddStudent(txtStudentID.Text, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text, cbProgram.Text, txtProgramShort.Text, txtGender.Text, txtPatronType.Text);
+                AS.SaveAddStudent(txtStudentID.Text, txtFirstname.Text, txtLastname.Text, txtMiddlename.Text, cbProgram.Text, txtProgram.Text, Gender.Text, txtPatronType.Text);
                 Studentlist();
                 ClearAddStudentInfo();
             }
@@ -198,6 +200,82 @@ namespace STILibrarySystem
             {
                 tabControl1.TabPages.Remove(tabPage2);
                 btnEdit.Hide();
+            }
+        }
+
+        private void cbProgram_TextChanged(object sender, EventArgs e)
+        {
+            if (cbProgram.Text.Equals("BS Information Technology"))
+            {
+                txtProgram.Text = "BSIT";
+            }
+
+            else if (cbProgram.Text.Equals("BS Computer Science"))
+            {
+                txtProgram.Text = "BSCS";
+            }
+
+            else if (cbProgram.Text.Equals("BS Information Systems"))
+            {
+                txtProgram.Text = "BSIS";
+            }
+
+            else if (cbProgram.Text.Equals("BS in Accountancy"))
+            {
+                txtProgram.Text = "BSA";
+            }
+
+            else if (cbProgram.Text.Equals("BS in Hospitality Management"))
+            {
+                txtProgram.Text = "BSHM";
+            }
+
+            else if (cbProgram.Text.Equals("BS in Tourism Management"))
+            {
+                txtProgram.Text = "BSTM";
+            }
+        }
+
+        private void txtStudentID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void StudentID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void Program_TextChanged(object sender, EventArgs e)
+        {
+            if (Program.Text.Equals("BS Information Technology"))
+            {
+                Programshort.Text = "BSIT";
+            }
+
+            else if (Program.Text.Equals("BS Computer Science"))
+            {
+                Programshort.Text = "BSCS";
+            }
+
+            else if (Program.Text.Equals("BS Information Systems"))
+            {
+                Programshort.Text = "BSIS";
+            }
+
+            else if (Program.Text.Equals("BS in Accountancy"))
+            {
+                Programshort.Text = "BSA";
+            }
+
+            else if (Program.Text.Equals("BS in Hospitality Management"))
+            {
+                Programshort.Text = "BSHM";
+            }
+
+            else if (Program.Text.Equals("BS in Tourism Management"))
+            {
+                Programshort.Text = "BSTM";
             }
         }
     }

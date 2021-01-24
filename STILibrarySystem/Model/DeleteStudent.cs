@@ -33,7 +33,7 @@ namespace STILibrarySystem
                     MessageBox.Show("Deleted Successfully", "Delete Complete!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                else
+                else if(result == DialogResult.No)
                 {
                     //Do Something
                 }

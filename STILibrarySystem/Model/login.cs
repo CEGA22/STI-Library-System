@@ -12,6 +12,8 @@ namespace STILibrarySystem
     public class login
     {
         public static string position;
+        public static string firstname;
+        public static string lastname;
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
         public void UserCredentials(string username, string password)
         {
@@ -27,9 +29,9 @@ namespace STILibrarySystem
             if (dr.Read())
             {
                
-                string firstname = Convert.ToString(dr["firstname"]);
-                string lastname = Convert.ToString(dr["lastname"]);
-                position = Convert.ToString(dr["username"]);
+                firstname = Convert.ToString(dr["firstname"]);
+                lastname = Convert.ToString(dr["lastname"]);
+                position = Convert.ToString(dr["position"]);
                 DateTime date = DateTime.Now;
                 HomePage HP = new HomePage();
                 HP.Show();

@@ -187,8 +187,8 @@ namespace STILibrarySystem
             {
                 tabControl1.TabPages.Remove(tabPage2);
                 btnEdit.Hide();
-                
-            }    
+
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace STILibrarySystem
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.PatronType = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace STILibrarySystem
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Lastname = new System.Windows.Forms.TextBox();
-            this.Gender = new System.Windows.Forms.TextBox();
             this.Middlename = new System.Windows.Forms.TextBox();
             this.Firstname = new System.Windows.Forms.TextBox();
             this.StudentID = new System.Windows.Forms.TextBox();
@@ -69,11 +69,11 @@ namespace STILibrarySystem
             this.label21 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtProgram = new System.Windows.Forms.TextBox();
+            this.Gender = new System.Windows.Forms.ComboBox();
             this.cbProgram = new System.Windows.Forms.ComboBox();
             this.txtPatronType = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtProgramShort = new System.Windows.Forms.TextBox();
             this.txtMiddlename = new System.Windows.Forms.TextBox();
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.txtFirstname = new System.Windows.Forms.TextBox();
@@ -259,6 +259,7 @@ namespace STILibrarySystem
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbGender);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.PatronType);
             this.panel1.Controls.Add(this.label20);
@@ -274,7 +275,6 @@ namespace STILibrarySystem
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Lastname);
-            this.panel1.Controls.Add(this.Gender);
             this.panel1.Controls.Add(this.Middlename);
             this.panel1.Controls.Add(this.Firstname);
             this.panel1.Controls.Add(this.StudentID);
@@ -282,6 +282,18 @@ namespace STILibrarySystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 623);
             this.panel1.TabIndex = 22;
+            // 
+            // cbGender
+            // 
+            this.cbGender.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbGender.Location = new System.Drawing.Point(156, 321);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(132, 30);
+            this.cbGender.TabIndex = 42;
             // 
             // label22
             // 
@@ -349,6 +361,7 @@ namespace STILibrarySystem
             this.Program.Size = new System.Drawing.Size(256, 27);
             this.Program.TabIndex = 37;
             this.Program.TabStop = false;
+            this.Program.TextChanged += new System.EventHandler(this.Program_TextChanged);
             // 
             // btnEdit
             // 
@@ -488,17 +501,6 @@ namespace STILibrarySystem
             this.Lastname.TabIndex = 24;
             this.Lastname.TabStop = false;
             // 
-            // Gender
-            // 
-            this.Gender.BackColor = System.Drawing.SystemColors.Control;
-            this.Gender.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.Location = new System.Drawing.Point(156, 318);
-            this.Gender.Multiline = true;
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(132, 32);
-            this.Gender.TabIndex = 22;
-            this.Gender.TabStop = false;
-            // 
             // Middlename
             // 
             this.Middlename.BackColor = System.Drawing.SystemColors.Control;
@@ -531,6 +533,7 @@ namespace STILibrarySystem
             this.StudentID.Size = new System.Drawing.Size(256, 36);
             this.StudentID.TabIndex = 19;
             this.StudentID.TabStop = false;
+            this.StudentID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StudentID_KeyPress);
             // 
             // listofStudentsView
             // 
@@ -539,7 +542,7 @@ namespace STILibrarySystem
             this.listofStudentsView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listofStudentsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.listofStudentsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listofStudentsView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.listofStudentsView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listofStudentsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -620,11 +623,11 @@ namespace STILibrarySystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txtGender);
+            this.panel3.Controls.Add(this.txtProgram);
+            this.panel3.Controls.Add(this.Gender);
             this.panel3.Controls.Add(this.cbProgram);
             this.panel3.Controls.Add(this.txtPatronType);
             this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.txtProgramShort);
             this.panel3.Controls.Add(this.txtMiddlename);
             this.panel3.Controls.Add(this.txtLastname);
             this.panel3.Controls.Add(this.txtFirstname);
@@ -642,13 +645,26 @@ namespace STILibrarySystem
             this.panel3.Size = new System.Drawing.Size(1385, 536);
             this.panel3.TabIndex = 25;
             // 
-            // txtGender
+            // txtProgram
             // 
-            this.txtGender.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(647, 323);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(225, 30);
-            this.txtGender.TabIndex = 53;
+            this.txtProgram.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProgram.Location = new System.Drawing.Point(647, 488);
+            this.txtProgram.Name = "txtProgram";
+            this.txtProgram.Size = new System.Drawing.Size(225, 28);
+            this.txtProgram.TabIndex = 56;
+            // 
+            // Gender
+            // 
+            this.Gender.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gender.FormattingEnabled = true;
+            this.Gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.Gender.Location = new System.Drawing.Point(647, 314);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(225, 30);
+            this.Gender.TabIndex = 54;
+            this.Gender.Text = "Select Gender";
             // 
             // cbProgram
             // 
@@ -664,6 +680,8 @@ namespace STILibrarySystem
             this.cbProgram.Name = "cbProgram";
             this.cbProgram.Size = new System.Drawing.Size(225, 27);
             this.cbProgram.TabIndex = 52;
+            this.cbProgram.Text = "Select program course";
+            this.cbProgram.TextChanged += new System.EventHandler(this.cbProgram_TextChanged);
             // 
             // txtPatronType
             // 
@@ -682,14 +700,6 @@ namespace STILibrarySystem
             this.label23.Size = new System.Drawing.Size(120, 24);
             this.label23.TabIndex = 50;
             this.label23.Text = "Patron Type:";
-            // 
-            // txtProgramShort
-            // 
-            this.txtProgramShort.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProgramShort.Location = new System.Drawing.Point(647, 486);
-            this.txtProgramShort.Name = "txtProgramShort";
-            this.txtProgramShort.Size = new System.Drawing.Size(225, 30);
-            this.txtProgramShort.TabIndex = 48;
             // 
             // txtMiddlename
             // 
@@ -722,6 +732,7 @@ namespace STILibrarySystem
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(225, 30);
             this.txtStudentID.TabIndex = 42;
+            this.txtStudentID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentID_KeyPress);
             // 
             // label19
             // 
@@ -863,7 +874,6 @@ namespace STILibrarySystem
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Lastname;
-        private System.Windows.Forms.TextBox Gender;
         private System.Windows.Forms.TextBox Middlename;
         private System.Windows.Forms.TextBox Firstname;
         private System.Windows.Forms.TextBox StudentID;
@@ -875,7 +885,6 @@ namespace STILibrarySystem
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox Programshort;
-        private System.Windows.Forms.TextBox txtProgramShort;
         private System.Windows.Forms.TextBox txtMiddlename;
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.TextBox txtFirstname;
@@ -891,7 +900,9 @@ namespace STILibrarySystem
         private System.Windows.Forms.TextBox txtPatronType;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox cbProgram;
-        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtStudentID;
+        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.ComboBox Gender;
+        private System.Windows.Forms.TextBox txtProgram;
     }
 }
