@@ -196,7 +196,7 @@ namespace STILibrarySystem
         {
             string position = login.position;
 
-            if (position.Equals("librarian"))
+            if (position.Equals("Librarian"))
             {
                 tabControl1.TabPages.Remove(tabPage2);
                 btnEdit.Hide();

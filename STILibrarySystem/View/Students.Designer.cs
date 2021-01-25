@@ -205,7 +205,7 @@ namespace STILibrarySystem
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1408, 652);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "List of Students/Update Book/s";
+            this.tabPage1.Text = "List of Students/Update Student/s";
             // 
             // label10
             // 
