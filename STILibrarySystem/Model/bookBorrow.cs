@@ -18,7 +18,7 @@ namespace STILibrarySystem
        
         public void book_Borrowed(string studentNo, string firstname, string lastname, string middlename, string patronType, string Department, string bookNumber, string titleofBook, string author)
         {
-            
+    
             List<string> datelist = new List<string>();
             DialogResult result = MessageBox.Show("Are You Sure You Want To Borrow this Book? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -86,7 +86,6 @@ namespace STILibrarySystem
 
                     BookBorrowedConfirmation BBC = new BookBorrowedConfirmation();
                     BBC.ShowDialog();
-                   
                 }
 
                 catch (Exception e1)

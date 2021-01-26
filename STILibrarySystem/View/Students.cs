@@ -60,7 +60,6 @@ namespace STILibrarySystem
 
             con.Close();
             listofStudentsView.DataSource = dt;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
