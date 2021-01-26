@@ -86,7 +86,7 @@ namespace STILibrarySystem
 
                     BookBorrowedConfirmation BBC = new BookBorrowedConfirmation();
                     BBC.ShowDialog();
-                    //MessageBox.Show("Borrowed Book Successfully \nBook Title: " + titleofBook + "\nBook Borrowed: " + datetoday.ToString("yyyy-MM-dd") + "\nBook Returned: " + datelist.Last(), "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                 }
 
                 catch (Exception e1)
