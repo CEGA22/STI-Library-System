@@ -185,7 +185,7 @@ namespace STILibrarySystem
             else
             {
                 bookBorrow BookBorrow = new bookBorrow();
-                BookBorrow.book_Borrow(txtStudentNo.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPatronType.Text, txtDepartment.Text, txtBookNumber.Text, txtTitleofBook.Text, txtAuthor.Text);
+                BookBorrow.book_Borrowed(txtStudentNo.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPatronType.Text, txtDepartment.Text, txtBookNumber.Text, txtTitleofBook.Text, txtAuthor.Text);
                 bookdetailsdisabled();
                 studentbookInfoCleared();
 
