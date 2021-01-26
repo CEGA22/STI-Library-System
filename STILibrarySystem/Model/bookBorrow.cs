@@ -12,10 +12,13 @@ namespace STILibrarySystem
     public class bookBorrow
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N1C2I03;Initial Catalog=STILibrarySystem;Integrated Security=True");
-
-        public void book_Borrow(string studentNo, string firstname, string lastname, string middlename, string patronType, string Department, string bookNumber, string titleofBook, string author)
+        public static string booktitle;
+        public static string borrowedDate;
+        public static string datereturned;
+       
+        public void book_Borrowed(string studentNo, string firstname, string lastname, string middlename, string patronType, string Department, string bookNumber, string titleofBook, string author)
         {
-
+            
             List<string> datelist = new List<string>();
             DialogResult result = MessageBox.Show("Are You Sure You Want To Borrow this Book? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -27,7 +30,6 @@ namespace STILibrarySystem
                     con.Open();
                     command1.ExecuteNonQuery();
                     con.Close();
-
 
                     var cmd = new SqlCommand("SELECT days_of_return FROM List_of_books WHERE book_number = " + int.Parse(bookNumber), con);
                     con.Open();
@@ -74,11 +76,17 @@ namespace STILibrarySystem
                     command.Parameters.AddWithValue("@author", author);
                     command.Parameters.AddWithValue("@borrowed_date", datetoday.ToString("yyyy-MM-dd"));
                     command.Parameters.AddWithValue("@borrow_returned", datelist.Last());
+                    string dates = datelist.Last();
+                    booktitle = titleofBook;
+                    borrowedDate = datetoday.ToString("dddd, dd MMMM yyyy");
+                    datereturned = DateTime.Parse(dates).ToString("dddd, dd MMMM yyyy");
                     con.Open();
                     command.ExecuteNonQuery();
                     con.Close();
 
-                    MessageBox.Show("Borrowed Book Successfully \nBook Title: " + titleofBook + "\nBook Borrowed: " + datetoday.ToString("yyyy-MM-dd") + "\nBook Returned: " + datelist.Last(), "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BookBorrowedConfirmation BBC = new BookBorrowedConfirmation();
+                    BBC.ShowDialog();
+                    //MessageBox.Show("Borrowed Book Successfully \nBook Title: " + titleofBook + "\nBook Borrowed: " + datetoday.ToString("yyyy-MM-dd") + "\nBook Returned: " + datelist.Last(), "Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 catch (Exception e1)
